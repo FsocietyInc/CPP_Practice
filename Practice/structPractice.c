@@ -1,5 +1,4 @@
 
-
 #include <stdio.h>
 
 struct stud{
@@ -7,7 +6,7 @@ struct stud{
     int rollNo;
     char name[30];
 } s[3];
-
+    
 int main(){
 
     int i , j ;
@@ -22,7 +21,8 @@ int main(){
 
         printf("\nEnter the marks of 6 subjects: \n");
         
-        for ( j = 0; j < 6; j++){
+        for ( j = 0; j < 5; ++j){
+            printf("\nSubject M%d : ", j+1);
             scanf("%d\t", &s[i].marks[j]);
         }
     }
