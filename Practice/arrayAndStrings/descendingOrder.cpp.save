@@ -1,0 +1,56 @@
+/*
+ * Statement:
+ *
+ * Program to sort elements in the array in descending order.
+ *
+ * Author: Prasad Chavan
+ *
+ * Nov 30, 2020
+ *
+ */
+
+ #include <iostream>
+
+ using namespace std;
+
+ int main(){
+
+    int arrD[6];
+    int i, j;
+
+    cout << "\nEnter the six elements of the array: ";
+
+    for (i = 0; i < 6; i++){
+
+        cin >> arrD[i];
+    }
+
+    cout << "\nThe order of elements Before sorting : \n";
+    for (i = 0; i < 6; i++){
+
+        cout << "\narrD[" << i << "] : " << arrD[i] << "\t";
+    }
+
+    for (i = 0; i < 6; i++){
+
+        for (j = i+1; j < 6; j++){
+
+            if (arrD[i] < arrD[j]){
+
+                arrD[i] = arrD[i] + arrD[j]; // Perform swapping if next number is greater.
+                arrD[j] = arrD[i] - arrD[j];
+                arrD[i] = arrD[i] - arrD[j];
+
+            }
+        }
+    }
+
+    cout << "The order of elements After swapping: \n";
+    for (i = 0; i < 6; i++){
+
+        cout << "\narrD[" << i << "] : " << arrD[i] << "\t";
+    }
+
+    return 0;
+ }
+
